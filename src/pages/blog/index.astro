@@ -20,7 +20,7 @@ const categories = ['All', ...new Set(posts.map(p => p.data.category))];
   description="Thoughts on marketing, business strategy, technology, and life by Bikash Kampo."
 >
   <section class="blog-page section">
-    <div class="container wide-width">
+    <div class="container content-width">
       <header class="page-header">
         <p class="section-title">All writing</p>
         <h1>Blog</h1>
@@ -100,7 +100,6 @@ const categories = ['All', ...new Set(posts.map(p => p.data.category))];
   }
 
   .posts-list {
-    max-width: var(--content-width);
   }
 </style>
 

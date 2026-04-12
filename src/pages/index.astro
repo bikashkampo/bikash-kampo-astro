@@ -20,7 +20,7 @@ const posts = (await getCollection('blog'))
 >
   <!-- Hero Section -->
   <section class="hero">
-    <div class="container">
+    <div class="container content-width">
       <div class="hero-content">
         <p class="hero-greeting">Hey, I'm Bikash</p>
         <h1 class="hero-title">I write about marketing, business, and building things on the internet.</h1>
@@ -35,7 +35,7 @@ const posts = (await getCollection('blog'))
 
   <!-- About Section -->
   <section class="about section">
-    <div class="container wide-width">
+    <div class="container content-width">
       <p class="section-title">A little about me</p>
       <div class="about-grid">
         <div class="about-text">
@@ -50,7 +50,7 @@ const posts = (await getCollection('blog'))
 
   <!-- Featured Posts -->
   <section class="featured section">
-    <div class="container wide-width">
+    <div class="container content-width">
       <p class="section-title">Latest writing</p>
       <div class="featured-posts">
         {posts.map(post => (
@@ -77,7 +77,6 @@ const posts = (await getCollection('blog'))
   }
 
   .hero-content {
-    max-width: 680px;
   }
 
   .hero-greeting {
@@ -165,10 +164,6 @@ const posts = (await getCollection('blog'))
   }
 
   /* About */
-  .about-text {
-    max-width: var(--content-width);
-  }
-
   .about-text p {
     font-size: 1.0625rem;
     line-height: 1.8;
@@ -199,10 +194,6 @@ const posts = (await getCollection('blog'))
   }
 
   /* Featured */
-  .featured-posts {
-    max-width: var(--content-width);
-  }
-
   .view-all {
     display: inline-block;
     margin-top: var(--space-lg);

@@ -61,7 +61,7 @@ const blogPostingSchema = {
     <script type="application/ld+json" set:html={JSON.stringify(blogPostingSchema)} />
   </Fragment>
   <article class="article">
-    <header class="article-header content-width">
+    <header class="article-header container content-width">
       <div class="article-meta">
         <span class="article-category">{category}</span>
         <span class="article-separator">&middot;</span>
@@ -77,16 +77,16 @@ const blogPostingSchema = {
     </header>
 
     {image && (
-      <div class="article-image wide-width">
+      <div class="article-image container content-width">
         <img src={image.url} alt={image.alt} />
       </div>
     )}
 
-    <div class="prose content-width">
+    <div class="prose container content-width">
       <slot />
     </div>
 
-    <footer class="article-footer content-width">
+    <footer class="article-footer container content-width">
       <a href="/blog" class="back-link">&larr; Back to all posts</a>
     </footer>
   </article>
@@ -98,9 +98,7 @@ const blogPostingSchema = {
   }
 
   .article-header {
-    text-align: left;
     margin-bottom: var(--space-xl);
-    padding: 0 var(--space-lg);
   }
 
   .article-meta {
@@ -147,7 +145,6 @@ const blogPostingSchema = {
 
   .article-image {
     margin-bottom: var(--space-xl);
-    padding: 0 var(--space-lg);
   }
 
   .article-image img {
@@ -156,7 +153,6 @@ const blogPostingSchema = {
   }
 
   .prose {
-    padding: 0 var(--space-lg);
   }
 
   .prose :global(p) {
@@ -274,7 +270,7 @@ const blogPostingSchema = {
 
   .article-footer {
     margin-top: var(--space-2xl);
-    padding: var(--space-lg) var(--space-lg) 0;
+    padding-top: var(--space-lg);
     border-top: 1px solid var(--color-border);
   }
 
