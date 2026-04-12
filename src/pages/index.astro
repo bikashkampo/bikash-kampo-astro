@@ -3,6 +3,11 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import BlogCard from '../components/BlogCard.astro';
 
+function getReadingTime(body?: string): number {
+  const wordCount = body?.trim().split(/\s+/).length ?? 250;
+  return Math.max(1, Math.ceil(wordCount / 200));
+}
+
 const posts = (await getCollection('blog'))
   .filter(post => !post.data.draft)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
@@ -11,7 +16,7 @@ const posts = (await getCollection('blog'))
 
 <BaseLayout
   title="Bikash Kampo"
-  description="I write about marketing, business, and building things on the internet."
+  description="Marketing professional writing about marketing, business strategy, and building things on the internet. Working at Vempus and running UntalkedSEO."
 >
   <!-- Hero Section -->
   <section class="hero">
@@ -19,8 +24,11 @@ const posts = (await getCollection('blog'))
       <div class="hero-content">
         <p class="hero-greeting">Hey, I'm Bikash</p>
         <h1 class="hero-title">I write about marketing, business, and building things on the internet.</h1>
-        <p class="hero-subtitle">I work on marketing at <a href="https://vempus.com" target="_blank" rel="noopener">Vempus</a> and run a programmatic SEO project called <a href="https://untalkedseo.com" target="_blank" rel="noopener">UntalkedSEO</a>. This is where I share what I'm learning.</p>
-        <a href="/blog" class="hero-cta">Read my writing &rarr;</a>
+        <p class="hero-subtitle">I work on marketing at <a href="https://vempus.com" target="_blank" rel="noopener noreferrer">Vempus</a> and run a programmatic SEO project called <a href="https://untalkedseo.com" target="_blank" rel="noopener noreferrer">UntalkedSEO</a>. This is where I share what I'm learning.</p>
+        <div class="hero-actions">
+          <a href="/blog" class="hero-cta">Read my writing &rarr;</a>
+          <a href="/about" class="hero-cta-secondary">About me</a>
+        </div>
       </div>
     </div>
   </section>
@@ -52,6 +60,7 @@ const posts = (await getCollection('blog'))
             pubDate={post.data.pubDate}
             category={post.data.category}
             slug={post.id}
+            readingTime={getReadingTime(post.body)}
           />
         ))}
       </div>
@@ -72,12 +81,24 @@ const posts = (await getCollection('blog'))
   }
 
   .hero-greeting {
-    font-size: 0.875rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8125rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--color-text-tertiary);
+    letter-spacing: 0.12em;
+    color: var(--color-accent);
     margin-bottom: var(--space-md);
+  }
+
+  .hero-greeting::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 1.5px;
+    background: currentColor;
+    flex-shrink: 0;
   }
 
   .hero-title {
@@ -91,7 +112,7 @@ const posts = (await getCollection('blog'))
     font-size: 1.125rem;
     line-height: 1.7;
     color: var(--color-text-secondary);
-    margin-bottom: var(--space-lg);
+    margin-bottom: var(--space-xl);
   }
 
   .hero-subtitle a {
@@ -106,21 +127,41 @@ const posts = (await getCollection('blog'))
     text-decoration-color: var(--color-accent);
   }
 
+  .hero-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+    flex-wrap: wrap;
+  }
+
   .hero-cta {
     display: inline-block;
     font-size: 0.9375rem;
     font-weight: 500;
-    color: var(--color-text);
+    color: var(--color-bg);
+    background: var(--color-text);
     text-decoration: none;
     padding: 0.625rem 1.5rem;
     border: 1px solid var(--color-text);
-    border-radius: 6px;
+    border-radius: var(--radius-md);
     transition: all var(--transition);
   }
 
   .hero-cta:hover {
-    background: var(--color-text);
-    color: var(--color-bg);
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+  }
+
+  .hero-cta-secondary {
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    transition: color var(--transition);
+  }
+
+  .hero-cta-secondary:hover {
+    color: var(--color-text);
   }
 
   /* About */

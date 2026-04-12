@@ -3,6 +3,11 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import BlogCard from '../../components/BlogCard.astro';
 
+function getReadingTime(body?: string): number {
+  const wordCount = body?.trim().split(/\s+/).length ?? 250;
+  return Math.max(1, Math.ceil(wordCount / 200));
+}
+
 const posts = (await getCollection('blog'))
   .filter(post => !post.data.draft)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
@@ -17,8 +22,9 @@ const categories = ['All', ...new Set(posts.map(p => p.data.category))];
   <section class="blog-page section">
     <div class="container wide-width">
       <header class="page-header">
+        <p class="section-title">All writing</p>
         <h1>Blog</h1>
-        <p class="page-subtitle">Writing about marketing, business, and things I find interesting.</p>
+        <p class="page-subtitle">Writing about marketing, business, and things I find interesting. {posts.length} posts total.</p>
       </header>
 
       <div class="category-filter" id="category-filter">
@@ -40,6 +46,7 @@ const categories = ['All', ...new Set(posts.map(p => p.data.category))];
             pubDate={post.data.pubDate}
             category={post.data.category}
             slug={post.id}
+            readingTime={getReadingTime(post.body)}
           />
         ))}
       </div>

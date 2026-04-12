@@ -7,51 +7,128 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   description="The page you're looking for doesn't exist."
 >
   <section class="not-found">
-    <div class="container content-width">
-      <h1>404</h1>
-      <p>The page you're looking for doesn't exist or has been moved.</p>
-      <a href="/" class="back-link">Go back home &rarr;</a>
+    <div class="container">
+      <div class="not-found-inner">
+        <p class="error-code">404</p>
+        <h1>Page not found</h1>
+        <p class="error-message">The page you're looking for doesn't exist or has been moved.</p>
+        <div class="error-actions">
+          <a href="/" class="btn-primary">Go back home</a>
+          <a href="/blog" class="btn-secondary">Browse the blog</a>
+        </div>
+        <div class="error-links">
+          <p>Or try one of these:</p>
+          <ul>
+            <li><a href="/about">About Bikash</a></li>
+            <li><a href="/contact">Get in touch</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 </BaseLayout>
 
 <style>
   .not-found {
-    text-align: center;
     padding: var(--space-2xl) var(--space-lg);
-    min-height: 50vh;
+    min-height: 60vh;
     display: flex;
     align-items: center;
-    justify-content: center;
   }
 
-  .not-found h1 {
-    font-size: 6rem;
+  .not-found-inner {
+    max-width: 480px;
+  }
+
+  .error-code {
+    font-family: var(--font-heading);
+    font-size: 5rem;
+    font-weight: 700;
     line-height: 1;
+    color: var(--color-border);
     margin-bottom: var(--space-md);
-    color: var(--color-text-tertiary);
+    letter-spacing: -0.04em;
   }
 
-  .not-found p {
-    font-size: 1.125rem;
+  .not-found-inner h1 {
+    font-size: 2rem;
+    margin-bottom: var(--space-md);
+  }
+
+  .error-message {
+    font-size: 1.0625rem;
     color: var(--color-text-secondary);
-    margin-bottom: var(--space-lg);
+    margin-bottom: var(--space-xl);
+    line-height: 1.7;
   }
 
-  .back-link {
+  .error-actions {
+    display: flex;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+    margin-bottom: var(--space-xl);
+  }
+
+  .btn-primary {
+    display: inline-block;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--color-bg);
+    background: var(--color-text);
+    text-decoration: none;
+    padding: 0.625rem 1.5rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-text);
+    transition: all var(--transition);
+  }
+
+  .btn-primary:hover {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+    color: white;
+  }
+
+  .btn-secondary {
+    display: inline-block;
     font-size: 0.9375rem;
     font-weight: 500;
     color: var(--color-text);
     text-decoration: none;
     padding: 0.625rem 1.5rem;
-    border: 1px solid var(--color-text);
-    border-radius: 6px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
     transition: all var(--transition);
-    display: inline-block;
   }
 
-  .back-link:hover {
-    background: var(--color-text);
-    color: var(--color-bg);
+  .btn-secondary:hover {
+    border-color: var(--color-text);
+    background: var(--color-bg-secondary);
+  }
+
+  .error-links p {
+    font-size: 0.875rem;
+    color: var(--color-text-tertiary);
+    margin-bottom: var(--space-sm);
+  }
+
+  .error-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: var(--space-lg);
+    flex-wrap: wrap;
+  }
+
+  .error-links a {
+    font-size: 0.9375rem;
+    color: var(--color-accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: color-mix(in srgb, var(--color-accent) 40%, transparent);
+    transition: text-decoration-color var(--transition);
+  }
+
+  .error-links a:hover {
+    text-decoration-color: var(--color-accent);
   }
 </style>

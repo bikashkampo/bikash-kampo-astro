@@ -8,9 +8,10 @@ interface Props {
   updatedDate?: Date;
   category: string;
   image?: { url: string; alt: string };
+  readingTime?: number;
 }
 
-const { title, description, pubDate, updatedDate, category, image } = Astro.props;
+const { title, description, pubDate, updatedDate, category, image, readingTime = 5 } = Astro.props;
 
 const formattedDate = pubDate.toLocaleDateString('en-US', {
   year: 'numeric',
@@ -18,25 +19,61 @@ const formattedDate = pubDate.toLocaleDateString('en-US', {
   day: 'numeric',
 });
 
-const wordCount = 1500;
-const readingTime = Math.max(1, Math.ceil(wordCount / 250));
+const formattedUpdatedDate = updatedDate?.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+
+const canonicalUrl = Astro.url.href;
+
+const blogPostingSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": title,
+  "description": description,
+  "url": canonicalUrl,
+  "datePublished": pubDate.toISOString(),
+  ...(updatedDate && { "dateModified": updatedDate.toISOString() }),
+  ...(image && { "image": image.url }),
+  "author": {
+    "@type": "Person",
+    "name": "Bikash Kampo",
+    "url": "https://bikashkampo.com"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Bikash Kampo",
+    "url": "https://bikashkampo.com"
+  }
+};
 ---
 
 <BaseLayout
   title={title}
   description={description}
   image={image?.url}
+  imageAlt={image?.alt}
   type="article"
   publishedDate={pubDate}
 >
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(blogPostingSchema)} />
+  </Fragment>
   <article class="article">
     <header class="article-header content-width">
       <div class="article-meta">
         <span class="article-category">{category}</span>
         <span class="article-separator">&middot;</span>
         <time datetime={pubDate.toISOString()}>{formattedDate}</time>
+        <span class="article-separator">&middot;</span>
+        <span class="reading-time">{readingTime} min read</span>
       </div>
       <h1>{title}</h1>
+      <p class="article-description">{description}</p>
+      {updatedDate && formattedUpdatedDate && (
+        <p class="article-updated">Updated {formattedUpdatedDate}</p>
+      )}
     </header>
 
     {image && (
@@ -69,7 +106,7 @@ const readingTime = Math.max(1, Math.ceil(wordCount / 250));
   .article-meta {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    flex-wrap: wrap;
     gap: 0.5rem;
     font-size: 0.875rem;
     color: var(--color-text-tertiary);
@@ -83,9 +120,28 @@ const readingTime = Math.max(1, Math.ceil(wordCount / 250));
     font-size: 0.75rem;
   }
 
+  .reading-time {
+    font-size: 0.8125rem;
+  }
+
   .article-header h1 {
     font-size: 2.5rem;
     line-height: 1.2;
+    margin-bottom: var(--space-md);
+  }
+
+  .article-description {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+    margin-bottom: 0;
+    font-style: italic;
+  }
+
+  .article-updated {
+    font-size: 0.8125rem;
+    color: var(--color-text-tertiary);
+    margin-top: var(--space-sm);
     margin-bottom: 0;
   }
 

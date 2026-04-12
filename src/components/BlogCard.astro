@@ -5,9 +5,10 @@ interface Props {
   pubDate: Date;
   category: string;
   slug: string;
+  readingTime?: number;
 }
 
-const { title, description, pubDate, category, slug } = Astro.props;
+const { title, description, pubDate, category, slug, readingTime } = Astro.props;
 
 const formattedDate = pubDate.toLocaleDateString('en-US', {
   year: 'numeric',
@@ -17,38 +18,45 @@ const formattedDate = pubDate.toLocaleDateString('en-US', {
 ---
 
 <a href={`/blog/${slug}`} class="blog-card" data-category={category}>
-  <div class="card-content">
-    <div class="card-meta">
-      <span class="card-category">{category}</span>
-      <span class="card-separator">&middot;</span>
-      <time datetime={pubDate.toISOString()}>{formattedDate}</time>
-    </div>
-    <h3 class="card-title">{title}</h3>
-    <p class="card-description">{description}</p>
+  <div class="card-meta">
+    <span class="card-category">{category}</span>
+    <span class="card-separator">&middot;</span>
+    <time datetime={pubDate.toISOString()}>{formattedDate}</time>
+    {readingTime && (
+      <>
+        <span class="card-separator">&middot;</span>
+        <span class="card-reading-time">{readingTime} min read</span>
+      </>
+    )}
   </div>
+  <h3 class="card-title">{title}</h3>
+  <p class="card-description">{description}</p>
 </a>
 
 <style>
   .blog-card {
     display: block;
-    padding: var(--space-lg) 0;
+    padding: var(--space-lg) var(--space-md);
+    margin: 0 calc(-1 * var(--space-md));
     text-decoration: none;
     border-bottom: 1px solid var(--color-border-light);
-    transition: background var(--transition);
+    border-radius: var(--radius-md);
+    transition: background var(--transition), border-color var(--transition);
   }
 
   .blog-card:hover {
     background: var(--color-bg-secondary);
-    margin: 0 calc(-1 * var(--space-md));
-    padding-left: var(--space-md);
-    padding-right: var(--space-md);
-    border-radius: 8px;
     border-bottom-color: transparent;
+  }
+
+  .blog-card:last-child {
+    border-bottom: none;
   }
 
   .card-meta {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 0.5rem;
     font-size: 0.8125rem;
     color: var(--color-text-tertiary);
@@ -62,6 +70,10 @@ const formattedDate = pubDate.toLocaleDateString('en-US', {
     font-size: 0.6875rem;
   }
 
+  .card-reading-time {
+    font-size: 0.75rem;
+  }
+
   .card-title {
     font-family: var(--font-heading);
     font-size: 1.25rem;
@@ -69,6 +81,11 @@ const formattedDate = pubDate.toLocaleDateString('en-US', {
     color: var(--color-text);
     margin-bottom: 0.375rem;
     line-height: 1.4;
+    transition: color var(--transition);
+  }
+
+  .blog-card:hover .card-title {
+    color: var(--color-accent);
   }
 
   .card-description {

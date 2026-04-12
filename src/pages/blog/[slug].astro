@@ -12,6 +12,9 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
+
+const wordCount = post.body ? post.body.trim().split(/\s+/).length : 250;
+const readingTime = Math.max(1, Math.ceil(wordCount / 200));
 ---
 
 <BlogPost
@@ -21,6 +24,7 @@ const { Content } = await render(post);
   updatedDate={post.data.updatedDate}
   category={post.data.category}
   image={post.data.image}
+  readingTime={readingTime}
 >
   <Content />
 </BlogPost>

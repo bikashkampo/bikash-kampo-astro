@@ -8,11 +8,26 @@ interface Props {
   title: string;
   description: string;
   image?: string;
+  imageAlt?: string;
   type?: 'website' | 'article';
   publishedDate?: Date;
 }
 
-const { title, description, image, type, publishedDate } = Astro.props;
+const { title, description, image, imageAlt, type, publishedDate } = Astro.props;
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Bikash Kampo",
+  "url": "https://bikashkampo.com",
+  "sameAs": [
+    "https://twitter.com/bablukampo",
+    "https://www.linkedin.com/in/bikashkampo/",
+    "https://www.instagram.com/bikashkampo/"
+  ],
+  "jobTitle": "Marketing Professional",
+  "description": "Writing about marketing, business, and building things on the internet."
+};
 ---
 
 <!doctype html>
@@ -21,6 +36,8 @@ const { title, description, image, type, publishedDate } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="alternate" type="application/rss+xml" title="Bikash Kampo" href="/rss.xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet" />
@@ -28,13 +45,17 @@ const { title, description, image, type, publishedDate } = Astro.props;
       title={title}
       description={description}
       image={image}
+      imageAlt={imageAlt}
       type={type}
       publishedDate={publishedDate}
     />
+    <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
+    <slot name="head" />
   </head>
   <body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
     <Header />
-    <main>
+    <main id="main-content">
       <slot />
     </main>
     <Footer />
