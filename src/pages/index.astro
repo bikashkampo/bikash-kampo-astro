@@ -1,0 +1,191 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BlogCard from '../components/BlogCard.astro';
+
+const posts = (await getCollection('blog'))
+  .filter(post => !post.data.draft)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 5);
+---
+
+<BaseLayout
+  title="Bikash Kampo"
+  description="I write about marketing, business, and building things on the internet."
+>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <p class="hero-greeting">Hey, I'm Bikash</p>
+        <h1 class="hero-title">I write about marketing, business, and building things on the internet.</h1>
+        <p class="hero-subtitle">I work on marketing at <a href="https://vempus.com" target="_blank" rel="noopener">Vempus</a> and run a programmatic SEO project called <a href="https://untalkedseo.com" target="_blank" rel="noopener">UntalkedSEO</a>. This is where I share what I'm learning.</p>
+        <a href="/blog" class="hero-cta">Read my writing &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about section">
+    <div class="container wide-width">
+      <p class="section-title">A little about me</p>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I grew up in Koraput, a small town in Odisha. Cricket was my thing growing up, but I started a small business in 2015 and got into marketing the following year.</p>
+          <p>I like how marketing sits at the intersection of psychology and data &mdash; figuring out why people buy things, what makes a product stick, and how ideas spread.</p>
+          <p>These days I work on marketing at <a href="https://vempus.com" target="_blank" rel="noopener">Vempus</a> and build SEO tools at <a href="https://untalkedseo.com" target="_blank" rel="noopener">UntalkedSEO</a>.</p>
+          <a href="/about" class="text-link">More about my journey &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Posts -->
+  <section class="featured section">
+    <div class="container wide-width">
+      <p class="section-title">Latest writing</p>
+      <div class="featured-posts">
+        {posts.map(post => (
+          <BlogCard
+            title={post.data.title}
+            description={post.data.description}
+            pubDate={post.data.pubDate}
+            category={post.data.category}
+            slug={post.id}
+          />
+        ))}
+      </div>
+      <a href="/blog" class="view-all">View all posts &rarr;</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* Hero */
+  .hero {
+    padding: var(--space-2xl) 0;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .hero-content {
+    max-width: 680px;
+  }
+
+  .hero-greeting {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text-tertiary);
+    margin-bottom: var(--space-md);
+  }
+
+  .hero-title {
+    font-size: 2.75rem;
+    line-height: 1.15;
+    margin-bottom: var(--space-lg);
+    letter-spacing: -0.02em;
+  }
+
+  .hero-subtitle {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-lg);
+  }
+
+  .hero-subtitle a {
+    color: var(--color-accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: color-mix(in srgb, var(--color-accent) 40%, transparent);
+    transition: text-decoration-color var(--transition);
+  }
+
+  .hero-subtitle a:hover {
+    text-decoration-color: var(--color-accent);
+  }
+
+  .hero-cta {
+    display: inline-block;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--color-text);
+    text-decoration: none;
+    padding: 0.625rem 1.5rem;
+    border: 1px solid var(--color-text);
+    border-radius: 6px;
+    transition: all var(--transition);
+  }
+
+  .hero-cta:hover {
+    background: var(--color-text);
+    color: var(--color-bg);
+  }
+
+  /* About */
+  .about-text {
+    max-width: var(--content-width);
+  }
+
+  .about-text p {
+    font-size: 1.0625rem;
+    line-height: 1.8;
+  }
+
+  .about-text a {
+    color: var(--color-accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: color-mix(in srgb, var(--color-accent) 40%, transparent);
+    transition: text-decoration-color var(--transition);
+  }
+
+  .about-text a:hover {
+    text-decoration-color: var(--color-accent);
+  }
+
+  .text-link {
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: opacity var(--transition);
+  }
+
+  .text-link:hover {
+    opacity: 0.7;
+  }
+
+  /* Featured */
+  .featured-posts {
+    max-width: var(--content-width);
+  }
+
+  .view-all {
+    display: inline-block;
+    margin-top: var(--space-lg);
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: opacity var(--transition);
+  }
+
+  .view-all:hover {
+    opacity: 0.7;
+  }
+
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2rem;
+    }
+
+  }
+
+  @media (max-width: 480px) {
+    .hero-title {
+      font-size: 1.625rem;
+    }
+  }
+</style>

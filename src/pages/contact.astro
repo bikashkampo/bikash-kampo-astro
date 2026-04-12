@@ -1,0 +1,142 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Contact"
+  description="Get in touch with Bikash Kampo. Reach out for collaborations, questions, or just to say hello."
+>
+  <section class="contact-page section">
+    <div class="container content-width">
+      <header class="page-header">
+        <p class="section-title">Contact</p>
+        <h1>Get in touch</h1>
+        <p class="page-subtitle">Feel free to reach out — whether it's about a project, a question, or just to say hi.</p>
+      </header>
+
+      <div class="contact-methods">
+        <div class="contact-card">
+          <h3>Social</h3>
+          <p>The best way to reach me is through social media. I'm most active on Twitter and LinkedIn.</p>
+          <div class="social-links">
+            <a href="https://twitter.com/bablukampo" target="_blank" rel="noopener noreferrer" class="social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733-16zM4 20l6.768-6.768M20 4l-6.768 6.768"/></svg>
+              <span>@bablukampo</span>
+            </a>
+            <a href="https://www.linkedin.com/in/bikashkampo/" target="_blank" rel="noopener noreferrer" class="social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              <span>Bikash Kampo</span>
+            </a>
+            <a href="https://www.instagram.com/bikashkampo/" target="_blank" rel="noopener noreferrer" class="social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              <span>@bikashkampo</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <h3>Work with me</h3>
+          <p>I'm always open to interesting projects and collaborations. If you have something in mind, drop me a DM on Twitter or connect on LinkedIn.</p>
+        </div>
+
+        <div class="contact-card">
+          <h3>Current projects</h3>
+          <ul class="projects-list">
+            <li><a href="https://vempus.com" target="_blank" rel="noopener">Vempus</a> — Marketing tools</li>
+            <li><a href="https://untalkedseo.com" target="_blank" rel="noopener">UntalkedSEO</a> — Programmatic SEO</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-header {
+    margin-bottom: var(--space-xl);
+  }
+
+  .page-header h1 {
+    margin-top: 0.25rem;
+    margin-bottom: var(--space-sm);
+  }
+
+  .page-subtitle {
+    font-size: 1.0625rem;
+    color: var(--color-text-secondary);
+    margin: 0;
+  }
+
+  .contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+  }
+
+  .contact-card h3 {
+    font-size: 1.125rem;
+    margin-bottom: var(--space-sm);
+  }
+
+  .contact-card p {
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+    margin-bottom: var(--space-md);
+  }
+
+  .social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    transition: all var(--transition);
+    max-width: 280px;
+  }
+
+  .social-link:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    background: var(--color-bg-secondary);
+  }
+
+  .social-link svg {
+    flex-shrink: 0;
+  }
+
+  .projects-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .projects-list li {
+    padding: 0.5rem 0;
+    color: var(--color-text-secondary);
+    font-size: 1rem;
+  }
+
+  .projects-list a {
+    color: var(--color-accent);
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: color-mix(in srgb, var(--color-accent) 40%, transparent);
+    transition: text-decoration-color var(--transition);
+  }
+
+  .projects-list a:hover {
+    text-decoration-color: var(--color-accent);
+  }
+</style>
