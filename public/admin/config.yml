@@ -21,6 +21,14 @@ collections:
       - { label: "Updated Date", name: "updatedDate", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", required: false }
       - { label: "Category", name: "category", widget: "select", options: ["Business", "Technology", "Life"] }
       - { label: "Author", name: "author", widget: "string", default: "Bikash Kampo" }
-      - { label: "OG Image", name: "image", widget: "image", required: false, hint: "Custom Open Graph image for social sharing. Leave empty to use the default." }
+      - label: "OG Image"
+        name: "image"
+        widget: "object"
+        required: false
+        collapsed: true
+        hint: "Custom Open Graph image for social sharing. Leave empty to use the default."
+        fields:
+          - { label: "Image", name: "url", widget: "image" }
+          - { label: "Alt Text", name: "alt", widget: "string" }
       - { label: "Draft", name: "draft", widget: "boolean", default: false }
       - { label: "Body", name: "body", widget: "markdown" }
