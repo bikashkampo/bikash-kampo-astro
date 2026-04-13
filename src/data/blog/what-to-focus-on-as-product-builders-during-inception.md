@@ -29,7 +29,7 @@ How?
 
 Well, he designed his suitcase to fit between the seats of a plane and was small enough to fit in an overhead bin. Though he focused on a very narrow user base, the appeal far exceeded what he originally envisioned.
 
-![Photo by Michał Parzuchowski on Unsplash](https://pub-bfd70a093bc24400bb25f969aed67b0f.r2.dev/blog/Rollaboard-Suitcase.jpeg)
+![Photo by Michał Parzuchowski on Unsplash](/images/blog/Rollaboard-Suitcase.jpeg)
 
 #### 2\. Airbnb
 
@@ -43,7 +43,7 @@ Originally pitched as a way to make a few bucks on the side, catering to the des
 
 Originally commissioned by the Swiss Military as a portable, multi-purpose tool for its personnel, the tool is now a tradition amongst civilians in many parts of the world.
 
-![Photo by Paul Felberbauer on Unsplash](https://pub-bfd70a093bc24400bb25f969aed67b0f.r2.dev/blog/Swiss-Army-Knife.jpeg)
+![Photo by Paul Felberbauer on Unsplash](/images/blog/Swiss-Army-Knife.jpeg)
 
 #### 4\. Uber
 
@@ -59,7 +59,7 @@ Sam Farber designed the first OXO tool, a peeler, inspired by his wife Betsey. H
 
 This led Farber to design the wide-handled OXO tools that are now a staple in most kitchens surpassing the original user base it was designed for.
 
-![Photo by kurizo on Adobe Stock](https://pub-bfd70a093bc24400bb25f969aed67b0f.r2.dev/blog/OXO-Good-Grips-Peeler.jpeg)
+![Photo by kurizo on Adobe Stock](/images/blog/OXO-Good-Grips-Peeler.jpeg)
 
 ### The Social voice for the Paradox of Specificity
 

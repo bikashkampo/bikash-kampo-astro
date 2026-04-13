@@ -34,7 +34,7 @@ Here’s a simple overview of how custom scripts work:
 
 By using Airtable’s scripting extension, you can write JavaScript right inside Airtable to call Claude’s API and update records.
 
-![](https://pub-bfd70a093bc24400bb25f969aed67b0f.r2.dev/blog/image-1024x537.png)
+![](/images/blog/image-1024x537.png)
 
 But if you’re not familiar with writing code, you can also use [scripts like this](https://invertedstone.com/store/multi-ai-airtable-script), just copy-paste in your scripting extension, and get it working immediately.
 
@@ -44,7 +44,7 @@ But if you’re not familiar with writing code, you can also use [scripts like t
 
 These are no-code/low-code automation tools that let you connect Airtable to Claude AI with drag-and-drop blocks or simple forms. You build a “flow” (in Make.com or n8n) or a “zap” (in Zapier) that moves data between Airtable and Claude’s API without writing full scripts.
 
-![](https://pub-bfd70a093bc24400bb25f969aed67b0f.r2.dev/blog/image-1-1024x621.png)
+![](/images/blog/image-1-1024x621.png)
 
 Here’s a simple overview of how these automation platforms work:
 
@@ -61,7 +61,7 @@ Explore [Make.com](http://make.com), [n8n](https://n8n.io/), and [Zapier](https:
 
 Data Fetcher is an Airtable app that lets you pull in or send out data via APIs without coding. It has pre-built integrations, including one for Anthropic’s Claude API. Essentially, Data Fetcher provides a simple form inside Airtable where you configure an API request and it handles the technical details.
 
-![](https://pub-bfd70a093bc24400bb25f969aed67b0f.r2.dev/blog/image-2-1024x529.png)
+![](/images/blog/image-2-1024x529.png)
 
 Here’s an overview of how this works:
 
@@ -79,7 +79,7 @@ Learn more about [Data Fetcher app](https://datafetcher.com/)
 
 Pipedream is a cloud integration platform that’s a bit like a mix of coding and workflow automation. It’s aimed at [developers](https://bikashkampo.com/building-pseoos/), offering a way to run code (JavaScript, Python, etc.) in the cloud easily, and it has a library of pre-built components for many services.
 
-![](https://pub-bfd70a093bc24400bb25f969aed67b0f.r2.dev/blog/image-3-1024x615.png)
+![](/images/blog/image-3-1024x615.png)
 
 Pipedream has connectors for Airtable and for Anthropic Claude. With Pipedream, you build a workflow that might have a trigger (e.g., an HTTP request, a schedule, or an Airtable event) and then steps that can include code or ready-made actions.
 

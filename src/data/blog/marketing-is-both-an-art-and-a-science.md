@@ -17,7 +17,7 @@ Mastering both the art and science of marketing can help businesses achieve thei
 
 Take Coca-Cola, for example.
 
-![source: cocacolaunited.com](https://pub-bfd70a093bc24400bb25f969aed67b0f.r2.dev/blog/image.png)
+![source: cocacolaunited.com](/images/blog/image.png)
 
 The company’s [“Share a Coke” campaign](https://en.wikipedia.org/wiki/Share_a_Coke) was a brilliant blend of art and science. Using data analytics, Coca-Cola identified the most popular names in each region and personalized their iconic bottles and cans with those names. The result was a campaign that not only increased sales but also created an emotional connection with customers.
 
@@ -47,7 +47,7 @@ Design is an integral part of marketing for ages as it helps to create a visual 
 
 **_Example:_** Nike’s “Just Do It” slogan and [iconic swoosh logo](https://en.wikipedia.org/wiki/Swoosh) are instantly recognizable and have become synonymous with the brand’s values of athleticism and determination.
 
-![source: www.smh.com.au](https://pub-bfd70a093bc24400bb25f969aed67b0f.r2.dev/blog/image-1.png)
+![source: www.smh.com.au](/images/blog/image-1.png)
 
 ### 5\. Writing persuasive copy
 
@@ -71,7 +71,7 @@ You can create multiple [simple tools around the product](https://tap2solve.com/
 
 **_Example_:** The IKEA Place App is an excellent example of [engineering as marketing](https://compile.blog/engineering-as-marketing/). Built on augmented reality (AR) technology, the app allows customers to virtually place IKEA furniture in their homes to see how it looks and fits in real time. It uses computer vision, machine learning, and 3D modeling to measure the user’s room and scale furniture accurately. By providing a unique and engaging customer experience, IKEA has increased sales and brand loyalty while reducing the likelihood of returns.
 
-![](https://pub-bfd70a093bc24400bb25f969aed67b0f.r2.dev/blog/image-2.png)
+![](/images/blog/image-2.png)
 
 ### 2\. Algorithms
 

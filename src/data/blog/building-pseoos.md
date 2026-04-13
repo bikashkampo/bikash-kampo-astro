@@ -27,7 +27,7 @@ I remember that our only goal was to make at least $1000 from the OS that we wer
 
 We are getting some great feedback from our customers as well.
 
-![](https://pub-bfd70a093bc24400bb25f969aed67b0f.r2.dev/blog/image.png)
+![](/images/blog/image.png)
 
 In the future, I will be experimenting with several small and low-cost projects that I can gather valuable feedback from. And if I get good results, I can double down and turn them into more ambitious projects.
 

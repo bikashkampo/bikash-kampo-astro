@@ -33,8 +33,8 @@ And when the economy recovers, people see their income increase and thus start s
 
 American example – Underwear index of USA
 
-![The underwear index was at the lowest point during housing market crash of 2008](https://pub-bfd70a093bc24400bb25f969aed67b0f.r2.dev/blog/underwear-index-of-america.png)
+![The underwear index was at the lowest point during housing market crash of 2008](/images/blog/underwear-index-of-america.png)
 
 Indian example – Sales of Page Industries & Rupa
 
-![The sales figure of Page Industries and Rupa Company have declined or hit the plateau from 2019 to 2020. This coincides with the fall in GDP growth rate of India past 2019](https://pub-bfd70a093bc24400bb25f969aed67b0f.r2.dev/blog/Sales-of-Page-Industries-Rupa.png)
+![The sales figure of Page Industries and Rupa Company have declined or hit the plateau from 2019 to 2020. This coincides with the fall in GDP growth rate of India past 2019](/images/blog/Sales-of-Page-Industries-Rupa.png)

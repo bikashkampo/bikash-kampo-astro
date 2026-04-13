@@ -21,7 +21,7 @@ Quality matters!
 
 As a team of SEO practitioners, we weren’t satisfied with the available resources. The majority of content in our field isn’t high quality and most of them are not covered.
 
-![](https://pub-bfd70a093bc24400bb25f969aed67b0f.r2.dev/blog/image.png)
+![](/images/blog/image.png)
 
 Most content out there was aimed at search engines, not people like you and me.
 

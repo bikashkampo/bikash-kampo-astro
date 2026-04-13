@@ -15,7 +15,7 @@ Hardly my innocent father knew that there are 2 things on the internet – ads a
 
 Let’s go back to how it all began. Imagine you’ve just logged into Facebook. You would indeed be uncomfortable if every time you load a new page on Facebook you were asked to log back in again and again. Now imagine you’re on Amazon and you add something to your cart. Wouldn’t it be annoying if it disappeared as soon as you click on another product? 
 
-![Credits: lifewire](https://pub-bfd70a093bc24400bb25f969aed67b0f.r2.dev/blog/Internet-ads.png)
+![Credits: lifewire](/images/blog/Internet-ads.png)
 
 How frustrating these scenarios would have been for you? It would have have taken a hell out of us.
 

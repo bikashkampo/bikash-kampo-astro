@@ -15,7 +15,7 @@ So, if you ask your team or your clients that why people buy from them. The answ
 
 They gonna say:
 
-![](https://pub-bfd70a093bc24400bb25f969aed67b0f.r2.dev/blog/Why-do-customers-really-buy-1.png)
+![](/images/blog/Why-do-customers-really-buy-1.png)
 
 All of the above things might be true, but these are not the answers that you need.
 
@@ -25,7 +25,7 @@ If you want to get big marketing results, the clients that are bragging about; t
 
 For a long time marketers thought this is the way:
 
-![](https://pub-bfd70a093bc24400bb25f969aed67b0f.r2.dev/blog/Why-do-customers-really-buy-customer-persona.png)
+![](/images/blog/Why-do-customers-really-buy-customer-persona.png)
 
 You go and create these customer personas on each customer segment like the above one in HubSpot.
 
@@ -46,7 +46,7 @@ Today, we have an astronomical amount of data about our customers. We know who t
 
 We are drowning with customer data, but
 
-![](https://pub-bfd70a093bc24400bb25f969aed67b0f.r2.dev/blog/We-dont-know-what-to-do.png)
+![](/images/blog/We-dont-know-what-to-do.png)
 
 This is the major problem. Right?
 
@@ -82,7 +82,7 @@ And then I discovered this guy – Clayton Christensen. He is widely considered 
 
 According to Clayton,
 
-![](https://pub-bfd70a093bc24400bb25f969aed67b0f.r2.dev/blog/Clayton-Christensen.png)
+![](/images/blog/Clayton-Christensen.png)
 
 > Jobs-to-be-done is a theory for understanding what motivates people to buy and use new things
 
@@ -94,7 +94,7 @@ If the product works well, they are happy. Then they are going to keep using it.
 
 This way of framing why people buy things, they are just the “Aha! moment” for me.
 
-![](https://pub-bfd70a093bc24400bb25f969aed67b0f.r2.dev/blog/Customer-priority.png)
+![](/images/blog/Customer-priority.png)
 
 It is an important distinction which a lot of marketers miss.
 
@@ -102,7 +102,7 @@ It is an important distinction which a lot of marketers miss.
 > 
 > – Kathy Sierra, Entrepreneur & Game Developer
 
-![](https://pub-bfd70a093bc24400bb25f969aed67b0f.r2.dev/blog/Camera.png)
+![](/images/blog/Camera.png)
 
 And so who would have thought that all of the technologies that we have today are just to make ourselves a better version. In this case, it’s about the best-known photographers nowadays around the world use a “mobile phone” as their tool choice rather than a DSLR.
 
@@ -112,13 +112,13 @@ So when I bought my new alarm clock, technically what I was buying is this thing
 
 **An Alarm Clock**
 
-![](https://pub-bfd70a093bc24400bb25f969aed67b0f.r2.dev/blog/Motivation-for-getting-up.png)
+![](/images/blog/Motivation-for-getting-up.png)
 
 But what I wanted was this thing:
 
 **To become fit for which I need to work out**
 
-![](https://pub-bfd70a093bc24400bb25f969aed67b0f.r2.dev/blog/Motivation-for-getting-up-fit.png)
+![](/images/blog/Motivation-for-getting-up-fit.png)
 
 I had made a birthday resolution to get fit and I hired my alarm clock to become the better version of myself.
 
@@ -128,11 +128,11 @@ In the past, I used my smartphone, like an alarm clock but that didn’t work fi
 
 And when the alarm rang in the morning, I was drowsy and it was way too easy to hit the snooze button and get back to bed.
 
-![](https://pub-bfd70a093bc24400bb25f969aed67b0f.r2.dev/blog/The-struggle-with-mobile-alarm.png)
+![](/images/blog/The-struggle-with-mobile-alarm.png)
 
 I wanted something that would not distract me and push me out of the bed in the morning.
 
-![](https://pub-bfd70a093bc24400bb25f969aed67b0f.r2.dev/blog/Alaram-get-up-from-bed.png)
+![](/images/blog/Alaram-get-up-from-bed.png)
 
 This new alarm clock doesn’t have a snooze button which is a huge plus point. And it’s not connected to the internet so I can’t scroll the feed at night.
 
@@ -140,7 +140,7 @@ What it does have, is a loud bell that is so jarring that it nearly gives me a h
 
 So now you know about my situation and you understand what triggered me to buy in the first place and what job I was trying to get done?
 
-![](https://pub-bfd70a093bc24400bb25f969aed67b0f.r2.dev/blog/Job-to-be-done.png)
+![](/images/blog/Job-to-be-done.png)
 
 **This is really neat, right?**
 
@@ -152,7 +152,7 @@ Let’s see some other examples.
 
 You just have the same job to do and you didn’t hire an old school alarm clock. What else would you hire?
 
-![](https://pub-bfd70a093bc24400bb25f969aed67b0f.r2.dev/blog/JUG-OF-WATER.png)
+![](/images/blog/JUG-OF-WATER.png)
 
 Well if you lived in medieval times when you didn’t have an alarm clock or a mobile device, you could hire a **jug of water to do your job**.
 
@@ -160,7 +160,7 @@ Back in 1400, they didn’t have alarm clocks, no electricity. So they wanted to
 
 Another way is maybe you can hire an **alarm clock rug** to do the job.
 
-![](https://pub-bfd70a093bc24400bb25f969aed67b0f.r2.dev/blog/alarm-clock-rug.png)
+![](/images/blog/alarm-clock-rug.png)
 
 This alarm clock literally forces you to go off the bed because the only way to turn it off is by standing on it for 30 secs.
 
@@ -170,7 +170,7 @@ Maybe your biggest problem is that you are not going to the bed on time because 
 
 So, you may not buy an old school alarm clock, then you may buy a cellphone lockbox.
 
-![](https://pub-bfd70a093bc24400bb25f969aed67b0f.r2.dev/blog/TIME-LOCK-SAFE-FOR-CELLPHONE-1.png)
+![](/images/blog/TIME-LOCK-SAFE-FOR-CELLPHONE-1.png)
 
 **My personal top secret:** _#PleaseDonotTryThisAtHome_ I just put the following magical words in my mom’s ear, “wake me up at 6:00 am since I have an important meeting”, and she will wake me up at 5:45 am and again call and check at 6:15 am that I didn’t go back to bed.
 
@@ -194,7 +194,7 @@ You can’t just ask your customer what their job to be done is – it may be a 
 
 They would struggle to answer.
 
-![](https://pub-bfd70a093bc24400bb25f969aed67b0f.r2.dev/blog/95-customer.png)
+![](/images/blog/95-customer.png)
 
 We buy for emotional reasons and we justify our decision with logic. And this is true in all purchasing decisions including B2B.
 
@@ -202,7 +202,7 @@ Here’s the thing if you want to market smarter, then you need to get below the
 
 What you deeply need is your customer stories that are where the deep gold is buried.
 
-![](https://pub-bfd70a093bc24400bb25f969aed67b0f.r2.dev/blog/customer-stories.png)
+![](/images/blog/customer-stories.png)
 
 The absolute best that I have found for understanding customers is **conducting 1:1 interviews with actual buyers is the best way to understand why customers really buy**.
 
@@ -210,13 +210,13 @@ Customers that have recently bought from you are the ones that will remember the
 
 I call this type of interview ‘**clarity calls**‘. Because they gonna help you to become so clear of what actually matters to customers and believe me that is so powerful.
 
-![](https://pub-bfd70a093bc24400bb25f969aed67b0f.r2.dev/blog/des-traynor.png)
+![](/images/blog/des-traynor.png)
 
 When you are doing these interviews, **your number one objective is to understand the customer’s buying journey in detail**.
 
 So a typical buying journey includes some of the same steps that you are very familiar.
 
-![](https://pub-bfd70a093bc24400bb25f969aed67b0f.r2.dev/blog/Customer-buyer-journey.png)
+![](/images/blog/Customer-buyer-journey.png)
 
 It starts with a trigger event i.e, the moment when the customer first realizes they wanted to make progress and they need a new solution. They move along the buying journey and it ends with them using your products and assuming about your product “Did it work? Did I get what I was hoping for? Did I make the progress that I hoped for? Is my job done?”
 
@@ -230,25 +230,25 @@ They are not investing time to understand why people buy and they are not trying
 
 So, many marketers put all their effort at this stage of buying journey:
 
-![](https://pub-bfd70a093bc24400bb25f969aed67b0f.r2.dev/blog/Customer-buyer-journey-1.png)
+![](/images/blog/Customer-buyer-journey-1.png)
 
 The ‘active looking’ stage is the stage where customers are actually looking for a solution like this. And marketers target these people, rather than trying to target people who are passively looking for the solution.
 
 And that is a big mistake. So there is so much you can learn by getting in front of people sooner – the people who are actively looking for a solution like yours.
 
-![](https://pub-bfd70a093bc24400bb25f969aed67b0f.r2.dev/blog/Customer-buyer-journey-2.png)
+![](/images/blog/Customer-buyer-journey-2.png)
 
 It’s just that simple right, before getting an alarm clock I will definitely search in Google for “How can I get up early?”(passive looking). Then when I know what will make me get up early i.e., in this case, is an alarm clock then I move to the second phase where I will think to buy an alarm clock (active looking).
 
 And when I start searching for an alarm clock then the competition increases- a lot of ads everywhere (YouTube, Google, etc.). This decreases the chances of me making my product stand out. But if I am able to provide a solution and hook the customer in the passive stage then it will be a win situation for me.
 
-![](https://pub-bfd70a093bc24400bb25f969aed67b0f.r2.dev/blog/Customer-buyer-journey-3.png)
+![](/images/blog/Customer-buyer-journey-3.png)
 
 Then we have to give them a compelling reason to choose us over our competition.
 
 Let’s see how most of the marketers are selling alarm and what customers want to buy:
 
-![](https://pub-bfd70a093bc24400bb25f969aed67b0f.r2.dev/blog/marketers-and-customers-want-1.png)
+![](/images/blog/marketers-and-customers-want-1.png)
 
 The 1st image “only alarm clock” doesn’t show the buyer’s motivation for buying an alarm clock. Now, look at the second image. Just imagine how much your product might stand out if you will include aspirational events just like this one. It lets the user feel the moment.
 

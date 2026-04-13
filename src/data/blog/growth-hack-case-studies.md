@@ -454,7 +454,7 @@ Ahrefs, an SEO software suite that contains tools for link building, keyword res
 
 They hacked the world’s biggest SEO conference (Brighton SEO) with a 10 cent coffee cup. By replacing nutritional data with keyword data, we generated buzz and got people talking. Imagine how much attraction they had at the conference. Everybody was instantly aware of the existence of Ahrefs; those cups worked as an ice-breaker to open new conversations and possibilities.
 
-![](https://pub-bfd70a093bc24400bb25f969aed67b0f.r2.dev/blog/Ahrefs-Coffee-Growth-Hack-768x1024.jpg)
+![](/images/blog/Ahrefs-Coffee-Growth-Hack-768x1024.jpg)
 
 ### Result
 
@@ -468,7 +468,7 @@ Crif Dogs, a hip place known for its innovative hot dogs
 
 They kept a strange vintage phone booth corner in the restaurant. One day, a person walked in and used the rotary dial phone and CLICK, a secret passage door opened to a cozy bar. And the bartender treated him to a tasty cocktail and gave a card to this lucky person on the card written: “Please Don’t Tell”.
 
-![](https://pub-bfd70a093bc24400bb25f969aed67b0f.r2.dev/blog/Please-dont-tell-growth-hack-Crif-Dogs.jpg)
+![](/images/blog/Please-dont-tell-growth-hack-Crif-Dogs.jpg)
 
 ### Result
 
@@ -498,7 +498,7 @@ CD Baby, an online distributor of independent music
 
 “Your order is on the way” you probably have received an email similar to this one. But I don’t think you ever received something like what Derek Sivers wrote:
 
-![](https://pub-bfd70a093bc24400bb25f969aed67b0f.r2.dev/blog/CD-Baby-master-piece-email-to-customer.png)
+![](/images/blog/CD-Baby-master-piece-email-to-customer.png)
 
 ### Result
 

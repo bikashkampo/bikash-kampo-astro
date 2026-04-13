@@ -40,7 +40,7 @@ The end-goal of this model is to result in voluntary, high-frequency engagement.
 
 ### Creating a habit-forming loop
 
-![The Hook Model](https://pub-bfd70a093bc24400bb25f969aed67b0f.r2.dev/blog/The-hooked-modal.png)
+![The Hook Model](/images/blog/The-hooked-modal.png)
 
 #### (1) Trigger
 
@@ -61,7 +61,7 @@ Internal triggers, on the other hand, come from feelings we have. The informatio
 
 _Example:_ The feeling of boredom we experience, followed by a desire to check Facebook. The site becomes associated with that emotion.
 
-![](https://pub-bfd70a093bc24400bb25f969aed67b0f.r2.dev/blog/Triggers.jpeg)
+![](/images/blog/Triggers.jpeg)
 
 #### (2) Action
 
