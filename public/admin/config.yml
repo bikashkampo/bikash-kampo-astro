@@ -3,6 +3,7 @@ backend:
   branch: main
 
 site_url: https://bikashkampo.com
+display_url: https://bikashkampo.com
 
 media_folder: "public/images/blog"
 public_folder: "/images/blog"
@@ -14,6 +15,8 @@ collections:
     create: true
     slug: "{{slug}}"
     extension: "md"
+    preview_path: "blog/{{slug}}"
+    summary: "{{title}} – {{category}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "text" }
