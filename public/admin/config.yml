@@ -16,7 +16,13 @@ collections:
     slug: "{{slug}}"
     extension: "md"
     preview_path: "blog/{{slug}}"
-    summary: "{{title}} – {{category}}"
+    summary: "{{title}} – {{category}} – {{pubDate}}"
+    sortable_fields: ["pubDate", "title", "category"]
+    view_filters:
+      - { label: "Business", field: "category", pattern: "Business" }
+      - { label: "Technology", field: "category", pattern: "Technology" }
+      - { label: "Life", field: "category", pattern: "Life" }
+      - { label: "Drafts", field: "draft", pattern: true }
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "text" }
