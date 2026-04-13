@@ -44,4 +44,4 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 
 ## Admin
 
-Visit `https://bikashkampo.com/admin` to add and/or edit posts.
+Visit `https://bikashkampo.com/admin` to add and edit posts.
