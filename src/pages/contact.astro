@@ -11,7 +11,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <header class="page-header">
         <p class="section-title">Contact</p>
         <h1>Get in touch</h1>
-        <p class="page-subtitle">Feel free to reach out — whether it's about a project, a question, or just to say hi.</p>
+        <p class="page-subtitle">Feel free to reach out – whether it's about a project, a question, or just to say hi.</p>
       </header>
 
       <div class="contact-methods">
@@ -34,18 +34,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
         </div>
 
-        <div class="contact-card">
-          <h3>Work with me</h3>
-          <p>I'm always open to interesting projects and collaborations. If you have something in mind, drop me a DM on Twitter or connect on LinkedIn.</p>
-        </div>
-
-        <div class="contact-card">
-          <h3>Current projects</h3>
-          <ul class="projects-list">
-            <li><a href="https://vempus.com" target="_blank" rel="noopener">Vempus</a> — Marketing tools</li>
-            <li><a href="https://untalkedseo.com" target="_blank" rel="noopener">UntalkedSEO</a> — Programmatic SEO</li>
-          </ul>
-        </div>
       </div>
     </div>
   </section>
@@ -116,27 +104,4 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     flex-shrink: 0;
   }
 
-  .projects-list {
-    list-style: none;
-    padding: 0;
-  }
-
-  .projects-list li {
-    padding: 0.5rem 0;
-    color: var(--color-text-secondary);
-    font-size: 1rem;
-  }
-
-  .projects-list a {
-    color: var(--color-accent);
-    font-weight: 500;
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    text-decoration-color: color-mix(in srgb, var(--color-accent) 40%, transparent);
-    transition: text-decoration-color var(--transition);
-  }
-
-  .projects-list a:hover {
-    text-decoration-color: var(--color-accent);
-  }
 </style>

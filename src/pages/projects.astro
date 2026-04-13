@@ -1,0 +1,98 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const projects = [
+  {
+    name: "Vemgram",
+    url: "https://vemgram.com",
+    description: "A B2B platform that connects Indian manufacturers and factories with retailers, exporters, and bulk buyers. Verified profiles with GST, PAN, and MSME badges help buyers source directly from the factories powering India's growth.",
+  },
+  {
+    name: "SharePDF",
+    url: "https://sharepdf.app",
+    description: "Upload a PDF, get an instant shareable link, and track who's viewing it. Built-in analytics show view counts, geography, and referrers – no sign-up needed for viewers. Supports custom URLs, password protection, and download controls.",
+  },
+  {
+    name: "EternalQR",
+    url: "https://eternalqr.app",
+    description: "Dynamic QR codes that never expire – even if you cancel your plan. Change the destination link anytime without reprinting the code. Includes scan analytics, custom branding, and support for URLs, vCards, Wi-Fi, and more.",
+  },
+];
+---
+
+<BaseLayout
+  title="Projects"
+  description="Things I've built – tools and platforms for manufacturers, document sharing, and QR codes."
+>
+  <section class="projects-page section">
+    <div class="container content-width">
+      <header class="page-header">
+        <p class="section-title">Projects</p>
+        <h1>Things I've built</h1>
+      </header>
+
+      <div class="projects-content">
+        {projects.map((project, i) => (
+          <div class="project">
+            <span class="project-number">{String(i + 1).padStart(2, '0')}</span>
+            <h2><a href={project.url} target="_blank" rel="noopener">{project.name}</a></h2>
+            <p>{project.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-header {
+    margin-bottom: var(--space-xl);
+  }
+
+  .page-header h1 {
+    margin-top: 0.25rem;
+  }
+
+  .projects-content {
+    font-size: 1.0625rem;
+    line-height: 1.8;
+  }
+
+  .project {
+    margin-bottom: var(--space-xl);
+  }
+
+  .project:last-child {
+    margin-bottom: 0;
+  }
+
+  .project-number {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--color-text-tertiary);
+    margin-bottom: 0.25rem;
+  }
+
+  .project h2 {
+    margin: 0 0 var(--space-sm) 0;
+  }
+
+  .project h2 a {
+    color: var(--color-accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: color-mix(in srgb, var(--color-accent) 40%, transparent);
+    transition: text-decoration-color var(--transition);
+  }
+
+  .project h2 a:hover {
+    text-decoration-color: var(--color-accent);
+  }
+
+  .project p {
+    color: var(--color-text-secondary);
+    margin: 0;
+  }
+</style>

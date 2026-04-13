@@ -3,14 +3,27 @@ const pathname = Astro.url.pathname;
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/blog', label: 'Blog' },
+  { href: '/projects', label: 'Projects' },
   { href: '/about', label: 'About' },
-  { href: '/contact', label: 'Contact' },
 ];
 ---
 
 <header class="header">
   <div class="header-inner container">
-    <a href="/" class="logo">Bikash Kampo</a>
+    <div class="logo-group">
+      <a href="/" class="logo">
+        <img src="/images/blog/profile.png" alt="Bikash Kampo" class="logo-avatar" width="32" height="32" />
+        Bikash Kampo
+      </a>
+      <div class="header-social">
+        <a href="https://twitter.com/bablukampo" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733-16zM4 20l6.768-6.768M20 4l-6.768 6.768"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/bikashkampo/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+      </div>
+    </div>
     <nav class="nav" id="main-nav">
       {navLinks.map(link => (
         <a
@@ -46,12 +59,46 @@ const navLinks = [
     height: 64px;
   }
 
+  .logo-group {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
   .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     font-family: var(--font-heading);
     font-size: 1.25rem;
     font-weight: 700;
     color: var(--color-text);
     text-decoration: none;
+  }
+
+  .logo-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .header-social {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .header-social a {
+    color: var(--color-text-tertiary);
+    transition: color var(--transition);
+    line-height: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  .header-social a:hover {
+    color: var(--color-accent);
   }
 
   .logo:hover {
