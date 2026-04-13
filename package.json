@@ -16,7 +16,6 @@
   },
   "devDependencies": {
     "@astrojs/rss": "^4.0.18",
-    "@astrojs/sitemap": "^3.7.2",
-    "turndown": "^7.2.4"
+    "@astrojs/sitemap": "^3.7.2"
   }
 }
