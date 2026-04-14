@@ -7,7 +7,7 @@ const blog = defineCollection({
     title: z.string(),
     description: z.string(),
     pubDate: z.coerce.date(),
-    updatedDate: z.coerce.date().optional(),
+    updatedDate: z.coerce.date().nullable().optional(),
     category: z.enum(['Business', 'Technology', 'Life']),
     author: z.string().default('Bikash Kampo'),
     image: z.object({
