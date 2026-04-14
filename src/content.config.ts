@@ -12,7 +12,7 @@ const blog = defineCollection({
     author: z.string().default('Bikash Kampo'),
     image: z.object({
       url: z.string(),
-      alt: z.string(),
+      alt: z.string().nullable().optional(),
     }).optional(),
     draft: z.boolean().default(false),
   }),
