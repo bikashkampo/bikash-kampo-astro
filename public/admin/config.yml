@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: bikashkampo/bikash-kampo-astro
   branch: main
 
 site_url: https://bikashkampo.com
