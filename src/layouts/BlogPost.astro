@@ -285,4 +285,46 @@ const blogPostingSchema = {
       font-size: 1rem;
     }
   }
+
+  .prose :global(table) {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9375rem;
+    margin: 1.75em 0;
+  }
+
+  .prose :global(th) {
+    background: var(--color-bg-secondary);
+    color: var(--color-text);
+    font-weight: 600;
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 0.75em 1em;
+    text-align: left;
+    border: 1px solid var(--color-border);
+  }
+
+  .prose :global(td) {
+    padding: 0.7em 1em;
+    border: 1px solid var(--color-border);
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+  }
+
+  .prose :global(tr:nth-child(even) td) {
+    background: var(--color-bg-secondary);
+  }
+
+  .prose :global(tr:hover td) {
+    background: color-mix(in srgb, var(--color-accent) 5%, transparent);
+  }
+
+  /* Horizontal scroll on mobile */
+  .prose :global(table) {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
 </style>
