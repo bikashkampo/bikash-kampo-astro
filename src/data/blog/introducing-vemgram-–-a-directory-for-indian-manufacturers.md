@@ -1,6 +1,6 @@
 ---
 title: Introducing Vemgram – A Directory for Indian Manufacturers
-description: Building Vemgram
+description: Building Vemgram – a platform that connects manufacturers across India with the buyers who need them.
 pubDate: 2026-04-21
 updatedDate: ''
 category: Business
