@@ -3,26 +3,36 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const projects = [
   {
-    name: "Vemgram",
-    url: "https://vemgram.com",
-    description: "A B2B platform that connects Indian manufacturers and factories with retailers, exporters, and bulk buyers. Verified profiles with GST, PAN, and MSME badges help buyers source directly from the factories powering India's growth.",
+    name: 'Vemgram',
+    url: 'https://vemgram.com',
+    description:
+      "A B2B platform that connects Indian manufacturers and factories with retailers, exporters, and bulk buyers. Verified profiles with GST, PAN, and MSME badges help buyers source directly from the factories powering India's growth.",
   },
   {
-    name: "SharePDF",
-    url: "https://sharepdf.app",
-    description: "Upload a PDF, get an instant shareable link, and track who's viewing it. Built-in analytics show view counts, geography, and referrers – no sign-up needed for viewers. Supports custom URLs, password protection, and download controls.",
+    name: 'SharePDF',
+    url: 'https://sharepdf.app',
+    description:
+      "Upload a PDF, get an instant shareable link, and track who's viewing it. Built-in analytics show view counts, geography, and referrers - no sign-up needed for viewers. Supports custom URLs, password protection, and download controls.",
   },
   {
-    name: "EternalQR",
-    url: "https://eternalqr.app",
-    description: "Dynamic QR codes that never expire – even if you cancel your plan. Change the destination link anytime without reprinting the code. Includes scan analytics, custom branding, and support for URLs, vCards, Wi-Fi, and more.",
+    name: 'EternalQR',
+    url: 'https://eternalqr.app',
+    description:
+      'Dynamic QR codes that never expire - even if you cancel your plan. Change the destination link anytime without reprinting the code. Includes scan analytics, custom branding, and support for URLs, vCards, Wi-Fi, and more.',
+  },
+  {
+    name: 'Hitbik',
+    url: 'https://web.archive.org/web/20161228221543/http://hitbik.com/',
+    status: 'acquired',
+    description:
+      'A rental platform that helped people find homes without brokers or hefty brokerage fees. It was built to make house-hunting more convenient and affordable.',
   },
 ];
 ---
 
 <BaseLayout
   title="Projects"
-  description="Things I've built – tools and platforms for manufacturers, document sharing, and QR codes."
+  description="Things I've built - tools and platforms for manufacturers, document sharing, and QR codes."
 >
   <section class="projects-page section">
     <div class="container content-width">
@@ -35,7 +45,14 @@ const projects = [
         {projects.map((project, i) => (
           <div class="project">
             <span class="project-number">{String(i + 1).padStart(2, '0')}</span>
-            <h2><a href={project.url} target="_blank" rel="noopener">{project.name}</a></h2>
+            <div class="project-heading">
+              <h2><a href={project.url} target="_blank" rel="noopener">{project.name}</a></h2>
+              {project.status && (
+                <span class:list={['project-status', `project-status-${project.status}`]}>
+                  {project.status}
+                </span>
+              )}
+            </div>
             <p>{project.description}</p>
           </div>
         ))}
@@ -76,7 +93,19 @@ const projects = [
   }
 
   .project h2 {
+    margin: 0;
+  }
+
+  .project-heading {
+    display: flex;
+    align-items: baseline;
+    gap: 0.625rem;
+    flex-wrap: wrap;
     margin: 0 0 var(--space-sm) 0;
+  }
+
+  .project-heading h2 {
+    display: inline;
   }
 
   .project h2 a {
@@ -94,5 +123,22 @@ const projects = [
   .project p {
     color: var(--color-text-secondary);
     margin: 0;
+  }
+
+  .project-status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1;
+    padding: 0.3rem 0.55rem;
+    border-radius: var(--radius-pill);
+  }
+
+  .project-status-acquired {
+    color: #6a1b9a;
+    background: #f3e5f5;
   }
 </style>
