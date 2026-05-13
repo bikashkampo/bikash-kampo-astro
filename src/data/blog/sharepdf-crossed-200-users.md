@@ -21,13 +21,10 @@ But for a small product that started with a very simple problem, 200 users feels
 
 The problem was simple:
 
-Sharing PDFs is still messy.
-
-You send a PDF as an email attachment, and then you do not know if the person opened it.
-
-You upload it to a storage tool, and the link looks long and confusing.
-
-You use some PDF hosting website, and suddenly your document is surrounded by ads.
+- Sharing PDFs is still messy.
+- You send a PDF as an email attachment, and then you do not know if the person opened it.
+- You upload it to a storage tool, and the link looks long and confusing.
+- You use some PDF hosting website, and suddenly your document is surrounded by ads.
 
 That experience never felt right.
 
@@ -39,13 +36,10 @@ So why should sharing it feel so unprofessional?
 
 SharePDF was built to make PDF sharing simple.
 
-Upload a PDF.
-
-Get a clean link.
-
-Share it anywhere.
-
-See if people open it.
+1. Upload a PDF.
+2. Get a clean link.
+3. Share it anywhere.
+4. See if people open it.
 
 That is the main idea.
 
@@ -99,17 +93,12 @@ It also tells us that we have to keep improving it.
 
 The biggest learning is this:
 
-People do not want a complicated PDF platform.
-
-They just want a clean way to share a file.
-
-They want the link to look good.
-
-They want the viewer to open easily.
-
-They want to know if someone looked at it.
-
-And sometimes, they want extra control when the document is important.
+- People do not want a complicated PDF platform.
+- They just want a clean way to share a file.
+- They want the link to look good.
+- They want the viewer to open easily.
+- They want to know if someone looked at it.
+- And sometimes, they want extra control when the document is important.
 
 That is it.
 
