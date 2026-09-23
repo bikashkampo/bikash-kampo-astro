@@ -35,6 +35,8 @@ Want a caption? Use image syntax and the alt text becomes the caption:
 
 Either form becomes a Plyr player through `src/plugins/remark-video.mjs`. The poster is derived as `<name>-poster.webp` next to the video; pass a different one as the Markdown title: `![Caption](clip.mp4 "https://…/poster.webp")`. Supported extensions are `mp4`, `m4v`, `webm`, `mov` and `ogv`.
 
+Astro 7 renders Markdown with Sätteri by default. The plugin is a remark plugin, so `astro.config.mjs` pins the Unified processor with `@astrojs/markdown-remark` – that dependency is the plugin's, and it can go once the plugin is ported to Sätteri.
+
 Two things that will bite:
 
 - A new host must be allowed in the CSP in `src/layouts/BaseLayout.astro` – `media-src` for the file and `img-src` for the poster. Without it the browser blocks the video and the page shows no error.
@@ -42,4 +44,4 @@ Two things that will bite:
 
 ## Deploy
 
-Push to `main`. `.github/workflows/deploy.yml` builds the site and publishes it to GitHub Pages, and `public/CNAME` points it at bikashkampo.com.
+Push to `main`. `.github/workflows/deploy.yml` builds the site and publishes it to GitHub Pages with the custom domain from the repo settings, so the Pages source has to be **GitHub Actions** – a `CNAME` file in the repo does nothing here and the branch-based builder only fails on `.astro` files.
