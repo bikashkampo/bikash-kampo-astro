@@ -1,14 +1,17 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
+import { unified } from '@astrojs/markdown-remark';
 import remarkVideo from './src/plugins/remark-video.mjs';
 
 export default defineConfig({
   site: 'https://bikashkampo.com',
   output: 'static',
   integrations: [sitemap()],
+  // Astro 7 renders Markdown with Sätteri by default. remark-video is a
+  // remark plugin, so the Unified processor stays in place for it.
   markdown: {
-    remarkPlugins: [remarkVideo],
+    processor: unified({ remarkPlugins: [remarkVideo] }),
   },
   build: {
     format: 'directory',
