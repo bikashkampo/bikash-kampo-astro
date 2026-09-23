@@ -1,11 +1,15 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
+import remarkVideo from './src/plugins/remark-video.mjs';
 
 export default defineConfig({
   site: 'https://bikashkampo.com',
   output: 'static',
   integrations: [sitemap()],
+  markdown: {
+    remarkPlugins: [remarkVideo],
+  },
   build: {
     format: 'directory',
   },
