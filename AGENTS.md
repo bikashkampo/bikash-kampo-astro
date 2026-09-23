@@ -1,13 +1,9 @@
-# AGENTS.md – Combined Writing Instructions
+# AGENTS.md – Blog Writing Instructions
 
-This file covers two modes of writing, with a shared foundation:
+Follow this when asked to write an article, blog post, or short note for
+bikashkampo.com.
 
-- **Section A – Articles:** follow this when asked to write an article, blog post, or short note.
-- **Section B – Social media posts:** follow this when asked to write posts for X/Twitter or similar social platforms.
-
-If the instruction doesn't make the mode clear, ask which one is needed before writing.
-
-## Shared rules (apply to both modes)
+## Rules
 
 - **Write simply. Avoid AI-slop language** – no flowery adjectives, unnecessary adverbs, or overly formal phrasing. Never use: delve, leverage, furthermore, moreover, game-changer, elevate, "In today's fast-paced world", "Excited to announce that we are thrilled to...".
 - **No em dashes (—).** Use en dashes ( – ) with spaces. Ellipses "..." for trailing off ("So...", "It's not perfect...").
@@ -20,7 +16,7 @@ If the instruction doesn't make the mode clear, ask which one is needed before w
 
 ---
 
-## Section A – Articles
+## Articles
 
 ### Voice and structure
 
@@ -81,68 +77,32 @@ If the instruction doesn't make the mode clear, ask which one is needed before w
 
 ---
 
-## Section B – Social media posts
+## Video embeds (site mechanics)
 
-### Voice
+Videos are never stored in this repo. They live on the asset host and the post
+only holds the URL.
 
-- The same person as in the articles, but even more casual. **One thought per post, 1–3 sentences.** Nothing essay-like.
-- **Share real numbers freely** – traffic, revenue, subscription costs, token usage, build times – with screenshots as proof.
-- **Correct yourself publicly** when wrong: "I couldn't have been more wrong with my prediction here." / "My bad." Honesty reads better than polish.
+Drop the link on its own line and the build turns it into a Plyr player with
+the poster, `preload="none"`, and a caption-free figure:
 
-### Two registers
+```md
+https://assets.deepakness.com/blog/cogsend-intro/cogsend-demo.mp4
+```
 
-Switch between them like the author does:
+Want a caption? Use image syntax – the alt text becomes the caption:
 
-**Announcements (launches, milestones, releases):** proper capitalization, a 🎉 or 🥳, and a link. Formula:
+```md
+![A quick demo of CogSend in action.](https://assets.deepakness.com/blog/cogsend-intro/cogsend-demo.mp4)
+```
 
-> "I built/shipped [name] – [what it does in one line]. [key detail]. [link]. [emoji]"
+Rules that keep it working:
 
-Example:
-
-> I built a tiny Chrome extension that captures the visible part of a tab and copies it to the clipboard in one click. No network requests, no analytics, and the screenshot never leaves the machine. Open source under MIT. [LINK]
-
-**Casual (observations, complaints, reactions):** lowercase start, no ending period, tech shorthand. Deliberate casual mode, not sloppiness:
-
-> gpt-5 is here in chatgpt
-
-> no matter what i do, codex always creates bad design 😅
-
-### Formats
-
-- **Threads** use numbered fragments ("1/", "2/"), one or two short lines per post, and end with 👇 pointing at the link, or "Here's the link:". Teaching threads are lists of short fragments, never long paragraphs.
-- **Article announcements:** the article title as the post, a one-line teaser, and the link. No extra hashtags.
-- **Replies are short and warm.** Thank people by name, mirror their tone: "🔥", "Haha", "True", "Makes sense", "Couldn't agree more", "Thanks, [name]!".
-- **Quote-posts** add a 1–2 line take on top of the quoted post, usually agreement plus a link to a related article.
-- **Engagement hooks:** "What do you think?", "What say?", "Right?", "Cool, right?", "Any recommendations?"
-
-### Emoji and links
-
-- **👇 always means "the link or screenshot is below".** Use it as a pointer, not decoration.
-- Emoji vocabulary (1–2 per post, usually at the end): 👇 😅 🔥 🎉 🥳 🤯 👀 😍 🤔 🎊 📌 🚀
-- **No hashtags.**
-- **Links are never bare** – always a one-line tease, a 👇, or a reaction attached.
-- Screenshots are attached as proof with a line like "as you see".
-
-### Social mechanics
-
-- Casual register drops capitalization and final periods; announcement register keeps them. Don't mix within one post.
-- Tool and model names written exactly (Cursor, Codex, Claude Code, pSEO, macOS), often in backticks.
-- Numbers with commas; prices like `$20/mo` or `₹649`.
-
-### Social vocabulary
-
-- Starters: "Just [did a thing]...", "Tried [a thing]...", "Found this...", "Came across...", "Folks,", "Today, I..."
-- Reactions: "Cool, right?", "This is awesome", "Love it", "Crazy!", "Sooo cool!", "What a time to be alive!"
-- Connectors: "Honestly,", "I think,", "Basically,", "By the way,", "Not to mention,"
-- Hedges: "probably", "maybe", "Not sure", "I guess"
-
-### Social checklist
-
-1. One idea per post, 1–3 sentences. Split anything longer into a thread.
-2. No em dashes; no AI-slop words; no flowery adjectives.
-3. Casual or announcement register – pick one and stay consistent within the post.
-4. Any link has a one-line tease or a 👇 with it.
-5. Numbers and screenshots as proof wherever a claim is made.
-6. Emoji max 1–2 per post, from the vocabulary above.
-7. No hashtags.
-8. Replies are warm, human, and named – never corporate.
+- The poster is derived as `<name>-poster.webp` next to the video. Upload one,
+  or pass a different one as the Markdown title:
+  `![Caption](https://…/clip.mp4 "https://…/poster.webp")`.
+- Only hosts listed in the CSP in `src/layouts/BaseLayout.astro` may serve
+  video or images. `assets.deepakness.com` is allowed; add any new host there.
+- Encode for the web before uploading – H.264 MP4, `-crf 26`, width capped at
+  1600, `-movflags +faststart`, AAC 96k. A 2K master at 60fps is 67 MB for two
+  minutes; the web version is 7 MB.
+- Supported extensions: `mp4`, `m4v`, `webm`, `mov`, `ogv`.
